@@ -13,6 +13,7 @@ services:
       - inception_network
     volumes:
       - wp_volume:/var/www/
+    # tty: true
 
   mariadb:
     container_name: mariadb
@@ -23,6 +24,7 @@ services:
       - inception_network
     volumes:
       - db_volume:/var/lib/mysql/
+    # tty: true
 
   wordpress:
     container_name: wordpress
@@ -35,6 +37,7 @@ services:
       - inception_network
     volumes:
       - wp_volume:/var/www/  
+    # tty: true
 
 networks:
   inception_network:
