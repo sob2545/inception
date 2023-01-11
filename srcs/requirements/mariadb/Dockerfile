@@ -7,10 +7,10 @@ RUN apt-get update -y \
 COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 COPY ./tools/mariadb_setup.sh /tmp/mariadb_setup.sh
 
-# RUN chmod +x /tmp/mariadb_setup.sh
+RUN chmod +x /tmp/mariadb_setup.sh
 
-# ENTRYPOINT [ "sh", "/tmp/mariadb_setup.sh" ]
+ENTRYPOINT [ "sh", "/tmp/mariadb_setup.sh" ]
 
-# EXPOSE 3306
+EXPOSE 3306
 
-# CMD [ "mysqld" ]
+CMD [ "mysqld" ]

@@ -14,4 +14,5 @@ if [ ! -d "/var/www" ];then
 fi
 
 sleep 3
+
 echo "wordpress begin!"
