@@ -12,5 +12,3 @@ RUN chmod +x /var/tmp/nginx_setup.sh
 ENTRYPOINT [ "var/tmp/nginx_setup.sh" ]
 
 EXPOSE 443
-
-CMD ["nginx", "-g", "daemon off;"]

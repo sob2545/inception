@@ -12,5 +12,3 @@ RUN chmod +x /tmp/mariadb_setup.sh
 ENTRYPOINT [ "sh", "/tmp/mariadb_setup.sh" ]
 
 EXPOSE 3306
-
-CMD [ "mysqld" ]
