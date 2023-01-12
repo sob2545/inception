@@ -10,14 +10,10 @@ down :
 	sudo docker compose -f ./srcs/docker-compose.yml down
 
 clean : 
-#	 sudo docker compose -f ./srcs/docker-compose.yml down -rmi all
-	sudo docker stop nginx mariadb wordpress
-	sudo docker rm nginx mariadb wordpress
+	sudo docker compose -f ./srcs/docker-compose.yml down -rmi all
 
-fclean :
-	sudo rm -rf ${HOME}/data
+fclean : clean
 	sudo docker system prune -f
-	sudo docker rmi $$(docker images -a)
 
 re : fclean
 	@make all
