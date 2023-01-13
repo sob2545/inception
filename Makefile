@@ -10,7 +10,7 @@ down :
 	sudo docker compose -f ./srcs/docker-compose.yml down
 
 clean : 
-	sudo docker compose -f ./srcs/docker-compose.yml down -rmi all
+	sudo docker compose -f ./srcs/docker-compose.yml down --rmi all
 
 fclean : clean
 	sudo docker system prune -f

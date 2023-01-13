@@ -6,6 +6,7 @@ RUN apt-get update -y \
 
 COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 COPY ./tools/mariadb_setup.sh /tmp/mariadb_setup.sh
+COPY ./tools/wpdb_dump.sql /tmp/
 
 RUN chmod +x /tmp/mariadb_setup.sh
 

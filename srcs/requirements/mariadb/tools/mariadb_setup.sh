@@ -12,7 +12,7 @@ if [ ! -d "/var/lib/mysql/$MYSQL_DATABASE" ];then
 	mysql -e "FLUSH PRIVILEGES;"
 	mysql -e "ALTER USER '$MYSQL_ROOT'@'localhost' IDENTIFIED BY '$MYSQL_ROOT_PASSWORD';"
 	mysql -e "FLUSH PRIVILEGES;"
-	# mysql $MYSQL_DATABASE -u$MYSQL_ROOT -p$MYSQL_ROOT_PASSWORD < ./wp_dump.sql
+	mysql $MYSQL_DATABASE -u$MYSQL_ROOT -p$MYSQL_ROOT_PASSWORD < /tmp/wpdb_dump.sql
 fi
 
 sleep 2;
