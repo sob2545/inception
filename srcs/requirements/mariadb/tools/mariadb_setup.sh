@@ -16,7 +16,7 @@ if [ ! -d "/var/lib/mysql/$MYSQL_DATABASE" ];then
 fi
 
 sleep 2;
-# mysqladmin -u$MYSQL_ROOT -p$MYSQL_ROOT_PASSWORD shutdown;
+mysqladmin -u$MYSQL_ROOT -p$MYSQL_ROOT_PASSWORD shutdown;
 
 echo "mysql begin!"
 

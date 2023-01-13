@@ -1,7 +1,7 @@
 all : up
 
 up :
-	sudo mkdir -p ${HOME}/data/mariadb ${HOME}/data/wordpress
+	sudo mkdir -p ~/data/mariadb ~/data/wordpress
 	sudo chmod 777 /etc/hosts
 	sudo echo "127.0.0.1 sesim.42.fr" > /etc/hosts
 	sudo docker compose -f ./srcs/docker-compose.yml up --build 
