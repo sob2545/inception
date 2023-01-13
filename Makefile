@@ -13,6 +13,7 @@ clean :
 	sudo docker compose -f ./srcs/docker-compose.yml down --rmi all
 
 fclean : clean
+	sudo rm -rf /home/sesim/data
 	sudo docker system prune -f
 
 re : fclean
