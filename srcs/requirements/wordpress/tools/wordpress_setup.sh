@@ -1,9 +1,9 @@
 #!bin/bash
 
 if [ ! -f "/var/wordpress/www/wp-config.php" ];then
+	tar -xzf /tmp/wordpress.tar.gz -C /var/www
 	rm -rf wordpress.tar.gz
 	mkdir -p /var/www
-	tar -xzf /tmp/wordpress.tar.gz -C /var/www
 
 
 	cp -rf ./tmp/wp-config.php /var/www/wordpress/
